@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root1"></div>
+
+    <!-- react scripts -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin>
+    </script>
+    <script
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+
+  <!-- //custom script  -->
+  <script>
+    const rootElement = document.querySelector('#root1');
+    const root = ReactDOM.createRoot(rootElement);
+
+    const update = () => {
+        const element1 = React.createElement(
+            'div',
+            null,
+            React.createElement(
+                'form',
+                null,
+                React.createElement('input', {
+                    type: 'text',
+                })
+            ),
+            React.createElement(
+                'span',
+                null,
+                'Time: ',
+                new Date().toLocaleTimeString()
+            )
+        );
+        root.render(element1)
+        console.log(element1)
+    };
+    setInterval(update, 1000)
+  </script>
+</body>
+</html>

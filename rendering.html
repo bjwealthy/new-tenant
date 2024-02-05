@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root2"></div>
+  
+  <script>
+    const update = () => {
+    //   JavaScript
+    const element2 = `
+      <h3>JavaScript:</h3>
+      <form>
+        <input type="text"/>
+      </form>
+      <span>Time: ${new Date().toLocaleTimeString()}</span>
+    `;
+    document.querySelector("#root2").innerHTML = element2;
+  };
+  
+  setInterval(update, 1000);
+  </script>
+</body>
+</html>
